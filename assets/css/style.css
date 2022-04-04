@@ -46,18 +46,16 @@ main{
     clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 
-
-
-
-
-
-
-
 .profilegithub{
     color:var(--gray);
+    margin: 0.75rem .45rem;
 }
 
-
+.divGithub{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 h1{
     font-size: 1.5rem;
@@ -74,8 +72,8 @@ a{
     align-items: center;
 }
 
-p{
-    margin-top: 2rem;
+#bioGithub{
+    margin-top: 1rem;
 }
 
 ul{

@@ -1,7 +1,5 @@
 const SocialObj = {
-    youtube: 'Rafael-doctom',
-    facebook: 'rafaelFake',
-    instagram: 'insFace'
+    github: 'Rafael-doctom',
 }
 
 const ChangeLinks = () => {
@@ -12,3 +10,22 @@ const ChangeLinks = () => {
 }
 
 ChangeLinks()
+
+function getGitHubProfileInfos() {
+    const URL = `https://api.github.com/users/${SocialObj.github}`
+
+
+    fetch(URL)
+        .then(response => response.json())
+        .then(data => {
+
+            document.getElementById("userName").textContent = `${data.name}`;
+            document.getElementById("profilegithub").textContent = `${data.login}`;
+            document.getElementById("bioGithub").textContent = `${data.bio}`;
+            profilegithub.href = `${data.html_url}`;
+            document.getElementById("imageProfile").textContent = `${data.bio}`;
+            imageProfile.src = `${data.avatar_url}`;
+        })
+}
+
+getGitHubProfileInfos()
