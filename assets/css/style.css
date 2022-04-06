@@ -8,45 +8,39 @@ body {
 }
 
 header{
-    display: grid;
+    /* display: grid; */
     place-items: center;
-    /* background: url("../images/background.svg"); */
     background-color: #121214;
-    /* width: 100%; */
     background-repeat: repeat-x;
     background: url("../images/background.svg");
     width: 100%;
-    height: 35vh;
-    /* position: absolute; */
-    /* z-index: 0; */
+    min-height: 38vh;
 }
 
-footer{
-    display: grid;
-    place-items: center;
-    background: url("../images/background.svg");
-    background-color: #121214;
-    background-repeat: repeat-x;
-    background: url("../images/background.svg");
-    width: 100%;
-    /* min-height: 37vh; */
-    /* margin-top: 20rem; */
-    height: 35vh;
-    position: absolute;
-    bottom: 0;
-    transform: rotate(180deg);
-}
 
 main{
     background: url("../images/background.svg");
     width: 500px;
-    height: 800px;
+    height: 650px;
     background-color: hsla(240, 6%, 13%, 0.795);
-    margin-top: -280px;
+    margin-top: -250px;
     border: 3px solid white;
     border-radius: 15px;
     -webkit-box-shadow: 4px 5px 21px 8px rgba(255,255,255,0.45);
     box-shadow: 4px 5px 21px 8px rgba(255,255,255,0.45);
+}
+
+footer{
+    place-items: center;
+    background: url("../images/background.svg");
+    background-color: #121214;
+    background-repeat: repeat-x;
+    background: url("../images/background.svg");
+    width: 100%;
+    min-height: 40vh;
+    position: absolute;
+    bottom: 0;
+    transform: rotate(180deg);
 }
 
 .divTransition{
@@ -76,7 +70,7 @@ main{
     position: absolute;
     top: -15px;
     z-index: 1;
-
+    
 }
 
 .avatar > img {
@@ -136,39 +130,68 @@ ul{
   }
 }
 
-@media (max-width:768px){
+@media screen and (max-width:1024px){
     header{
-        display: grid;
         place-items: center;
         background-color: #121214;
         background-repeat: repeat-x;
         background: url("../images/background.svg");
         width: 100%;
-        height: 55vh;
+        min-height:40vh;
     }
-    
+}
+
+@media screen and (max-width:768px){
+    header{
+        place-items: center;
+        background-color: #121214;
+        background-repeat: repeat-x;
+        background: url("../images/background.svg");
+        width: 100%;
+        min-height:40vh;
+    }
+}
+
+@media screen and (max-width:425px){
+    header{
+        place-items: center;
+        background-color: #121214;
+        background-repeat: repeat-x;
+        background: url("../images/background.svg");
+        width: 100%;
+        min-height:55vh;
+    }
+
     main{
         background: url("../images/background.svg");
-        width: 400px;
-        height: 670px;
+        width: 370px;
+        height: 620px;
         background-color: hsla(240, 6%, 13%, 0.795);
-        margin-top: -350px;
+        margin-top: -360px;
         border: 3px solid white;
         border-radius: 15px;
         -webkit-box-shadow: 4px 5px 21px 8px rgba(255,255,255,0.45);
         box-shadow: 4px 5px 21px 8px rgba(255,255,255,0.45);
     }
 
-    .divTransition{
+    footer{
+        place-items: center;
+        background: url("../images/background.svg");
+        background-color: #121214;
+        background-repeat: repeat-x;
+        background: url("../images/background.svg");
+        width: 100%;
+        min-height: 48vh;
         position: absolute;
-        width: 50px;
-        left: 10px;
-        -webkit-animation: divTransiction 50s ease-in-out infinite;
-        animation: divTransiction 35s ease-in-out infinite;
-        z-index: 999;
+        bottom: 0px;
+        transform: rotate(180deg);
     }
-}
 
-@media (max-width:425px){
-  
+    ul{
+        margin-top: 1rem;
+        display:flex;
+        padding: 0;
+        gap: 0.5rem;
+        justify-content: center;
+    }
 }
